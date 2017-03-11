@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.addTab(tabLayout.newTab().setText("Status Pembayaran"));
         tabLayout.addTab(tabLayout.newTab().setText("Status Order"));
         tabLayout.addTab(tabLayout.newTab().setText("SPM"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //Initializing viewPager
         viewPager = (ViewPager) findViewById(R.id.pager);
@@ -44,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.setOnTabSelectedListener(this);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
